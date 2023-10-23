@@ -10,11 +10,6 @@ Este trabalho utiliza as técnologias (...tecs) e a cadeira foca na necessidade 
 
 
 
-| Command | Description |
-| --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
-
 
 | Texto | Informação Musical ou Ação |
 | --- | --- |
@@ -27,6 +22,20 @@ Este trabalho utiliza as técnologias (...tecs) e a cadeira foca na necessidade 
 | (Letra G maiúscula) | `Nota Sol`|
 | Letras a,b,c,d,e,f,g minúsculas |**Se caractere anterior era NOTA (A a G), repete nota; Caso contrário, Silêncio ou pausa**|
 | Caractere Espaço | **Aumenta volume para o DOBRO do volume; Se não puder aumentar, volta ao volume default (de início)**|
- 
+| Caractere ! (ponto de exclamação) | Trocar instrumento para o instrumento General MIDI #114 (Agogo)|
+| Qualquer outra letra vogal (O ou o, I ou i , U ou u) | Trocar instrumento para o instrumento General MIDI (Harpsichord) |
+| Qualquer outra letra consoante(todas consoantes exceto as que são notas)| **Se caractere anterior era NOTA (A a G),repete nota; Caso contrário, Silêncio ou pausa**|
+|Dígito par ou impar|**Trocar instrumento para o instrumento General MIDI cujo numero é igual ao valor do instrumento ATUAL + valor do dígito**|
+| Caractere ? (ponto dev interrogação) e caractere .(ponto)|**Aumenta UMA oitava; Se não puder, aumentar, volta à oitava default (de início)**|
+| Caractere NL (nova linha)  |**Trocar instrumento para o instrumentoGeneral MIDI #15 (Tubular Bells)**|
+| Caractere ; (ponto e vírgula) |**Trocar instrumento para o instrumentoGeneral MIDI #76 (Pan Flute)**|
+| Caractere , (vírgula) |**Trocar instrumento para o instrumento General MIDI #20 (Church Organ)**|
+| ELSE (nenhum dos caracteres anteriores) |**Se caractere anterior era NOTA (A a G), repete nota; Caso contrário, Silêncio ou pausa**|
+
+
+
+
+
+
 
 
