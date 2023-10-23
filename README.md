@@ -25,7 +25,6 @@ Este trabalho utiliza as técnologias (...tecs) e a cadeira foca na necessidade 
 | (Letra E maiúscula) | Nota Mi|
 | (Letra F maiúscula) | Nota Fá|
 | (Letra G maiúscula) | Nota Sol|
-
 | Letras a,b,c,d,e,f,g minúsculas | Se caractere anterior era NOTA (A a G), repete nota; Caso contrário, Silêncio ou pausa|
 | Caractere Espaço | Aumenta volume para o DOBRO do volume; Se não puder aumentar, volta ao volume default (de início)|
  
