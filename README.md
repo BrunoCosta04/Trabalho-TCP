@@ -2,7 +2,7 @@
 Trabalho de Técnicas de Construção de Programas na Universidade Federal do rio Grande do Sul semestre 2023/2.
 Este trabalho utiliza as técnologias (...tecs) e a cadeira foca na necessidade da utilização da programação orientada a objeto com objetivo de desenvolver código com melhor qualidade, como expressado no livro base da disciplina Software Quality. 
 
-#Especificação do Trabalho
+# Especificação do Trabalho
 
 O objetivo do trabalho é a definição, a IMPLEMENTAÇÃO, teste e depuração de um GERADOR DE
 MÚSICA A PARTIR DE TEXTO, um software que recebe um TEXTO (a princípio, um texto livre, não
@@ -17,7 +17,7 @@ conhecimento do professor.
 O mapeamento PRÉ-DEFINIDO proposto é o seguinte:
 O mapeamento será complementado pelo grupo e atualizado aqui.
 
-
+# Mapeamento das teclas para música
 
 
 
@@ -44,8 +44,21 @@ O mapeamento será complementado pelo grupo e atualizado aqui.
 
 
 
+A entrada do texto DEVE ser via leitura em um campo texto na interface do software .
+Para a saída sonora , todos podem usar alguma API ou biblioteca de funções de som, como (em Java)
+JavaSound ou JFugue.
+Para se ter uma ideia de como funciona, uma demonstração de software similar ON-LINE pode ser achada no
+link listado no item (a) abaixo.
 
 
+http://p22.com/musicfont/
 
 
+O grupo deve imaginar que haverá alguma mudança nas fases 2 e 3 do trabalho prático. Então, pense
+no software de modo a facilitar estas mudanças.
 
+
+# Organização das Fases de implementação
+
+
+As fazes de implementação serão dispostas nas issues de maneira organizada e documentada.
