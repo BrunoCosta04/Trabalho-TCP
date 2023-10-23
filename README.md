@@ -4,8 +4,18 @@ Este trabalho utiliza as técnologias (...tecs) e a cadeira foca na necessidade 
 
 #Especificação do Trabalho
 
+O objetivo do trabalho é a definição, a IMPLEMENTAÇÃO, teste e depuração de um GERADOR DE
+MÚSICA A PARTIR DE TEXTO, um software que recebe um TEXTO (a princípio, um texto livre, não
+estruturado, como um conto ou uma página de jornal) como entrada e gera (podemos dizer informalmente que
+o software ´toca´ via acionamento de funções de som) um conjunto de NOTAS CORRESPONDENTES AO
+TEXTO segundo alguns PARÂMETROS (timbre, ritmo – na forma de Beats por Minuto ou BPM, etc).
+Os parâmetros são definidos através de um mapeamento de texto para informações musicais. Parte do
+mapeamento já está definida abaixo. O restante deve ser definido pelo grupo e documentado para
+conhecimento do professor.
 
 
+O mapeamento PRÉ-DEFINIDO proposto é o seguinte:
+O mapeamento será complementado pelo grupo e atualizado aqui.
 
 
 
