@@ -1,22 +1,57 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
+.display-3 {
+    font-size: 45px;
+}
+
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+}
+
+    /* Setas personalizadas */
+    .custom-dropdown::after {
+        content: "\25BC"; /* Código Unicode para a seta para baixo */
+        position: absolute;
+        top: 70%;
+        right: 20px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    /* Remove a borda do dropdown */
+    .custom-dropdown select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        width: 100%;
+        padding: 5px; /* Ajuste conforme necessário */
+        cursor: pointer;
+        background-color: #ccc; /* Cor de fundo cinza */
+    }
+
+
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }

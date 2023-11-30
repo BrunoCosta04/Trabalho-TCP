@@ -2,11 +2,50 @@
     ViewData["Title"] = "Home Page";
 }
 
+
+
 <div class="text-center">
-    <h1 class="display-4">Welcome to Music Player</h1>
-  
+    <h1 class="display-3">Music Player - Gerador de música a partir de textos</h1>
+    <div class="container text-center mt-5">
+        <p>Reproduza um texto qualquer como música! O gerador lerá o texto e transformará em uma música totalmente única, com harmonia, timbre, ritmos, tudo instantaneamente!</p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="textInput">Insira o texto abaixo:</label>
+        <textarea class="form-control" id="textInput" rows="10" placeholder="Insira aqui o texto a ser transformado em música"></textarea>
+    </div>
+
+
+    <div class="d-flex justify-content-center mb-3">
+        <!-- Dropdown para Instrumento -->
+        <div class="form-group mx-3 custom-dropdown">
+            <label for="instrumentoDropdown">Instrumento:</label>
+            <select class="custom-select" id="instrumentoDropdown">
+                <option value="piano">Piano</option>
+                <option value="violao">Violão</option>
+                <option value="guitarra">Guitarra</option>
+                <option value="flauta">Flauta</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </div>
+
+        <!-- Dropdown para Oitava -->
+        <div class="form-group mx-3 custom-dropdown">
+            <label for="oitavaDropdown">Oitava:</label>
+            <select class="custom-select" id="oitavaDropdown">
+                <option value="1">Oitava 1</option>
+                <option value="2">Oitava 2</option>
+                <option value="3">Oitava 3</option>
+                <option value="4">Oitava 4</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </div>
+    </div>
+
+
     <button type="button" class="btn btn-secondary m-5 btn-lg">Try it now</button>
 </div>
 <div>
-    <p class="m-5 text-center"> This app is a way to kjasdnkjasn play your favorite poetry, frase, or chapter as if it was music! Dont think that the music will be nice as your favorite song, nothing can be lovely to hear as 22 from Taylor Switf :)</p>
+    <p class="m-5 text-center"> This app is a way to play your favorite poetry, frase, or chapter as if it was music! Dont think that the music will be nice as your favorite song, nothing can be lovely to hear as 22 from Taylor Switf :)</p>
 </div>
