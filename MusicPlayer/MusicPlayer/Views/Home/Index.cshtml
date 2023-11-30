@@ -19,6 +19,30 @@
 
     <div class="d-flex justify-content-center mb-3">
         <!-- Dropdown para Instrumento -->
+
+        <div class="dropdown1">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Instrumento
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">piano</a>
+                <a class="dropdown-item" href="#">violão</a>
+                <a class="dropdown-item" href="#">guitarra</a>
+            </div>
+        </div>
+
+        <div class="dropdown2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Oitava
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">oitava 1</a>
+                <a class="dropdown-item" href="#">oitava 2</a>
+                <a class="dropdown-item" href="#">oitava 3</a>
+            </div>
+        </div>
+
+        <!--
         <div class="form-group mx-3 custom-dropdown">
             <label for="instrumentoDropdown">Instrumento:</label>
             <select class="custom-select" id="instrumentoDropdown">
@@ -26,26 +50,33 @@
                 <option value="violao">Violão</option>
                 <option value="guitarra">Guitarra</option>
                 <option value="flauta">Flauta</option>
-                <!-- Adicione mais opções conforme necessário -->
             </select>
         </div>
 
-        <!-- Dropdown para Oitava -->
         <div class="form-group mx-3 custom-dropdown">
             <label for="oitavaDropdown">Oitava:</label>
             <select class="custom-select" id="oitavaDropdown">
                 <option value="1">Oitava 1</option>
                 <option value="2">Oitava 2</option>
                 <option value="3">Oitava 3</option>
-                <option value="4">Oitava 4</option>
-                <!-- Adicione mais opções conforme necessário -->
             </select>
         </div>
+
+        -->
+
+     
+        <!-- Slider de Volume -->
+        <div class="volume-slider">
+            <label for="volumeRange">Volume:</label>
+            <input type="range" class="form-control-range" id="volumeRange">
+        </div>
+
+        <!-- Botões de Play/Pause -->
+        <div class="final-buttons">
+
+            <button type="button" class="btn btn-secondary">PLAY</button>
+            <button type="button" class="btn btn-secondary">PAUSE</button>
+
+        </div>
     </div>
-
-
-    <button type="button" class="btn btn-secondary m-5 btn-lg">Try it now</button>
-</div>
-<div>
-    <p class="m-5 text-center"> This app is a way to play your favorite poetry, frase, or chapter as if it was music! Dont think that the music will be nice as your favorite song, nothing can be lovely to hear as 22 from Taylor Switf :)</p>
 </div>

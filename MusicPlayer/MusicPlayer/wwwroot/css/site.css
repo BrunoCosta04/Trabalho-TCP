@@ -55,3 +55,25 @@ html {
 body {
     margin-bottom: 60px;
 }
+.dropdown1 {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.dropdown2 {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.volume-slider {
+    margin-top: 20px;
+}
+.final-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.final-buttons button {
+    font-size: 24px; /* Ajuste conforme necessário */
+    margin: 0 10px;
+}
