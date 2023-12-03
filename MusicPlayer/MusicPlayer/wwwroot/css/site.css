@@ -1,21 +1,34 @@
-html {
-    font-size: 14px;
+.centro-vertical-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
 
-.display-3 {
-    font-size: 45px;
+.width-btn{
+    width: 15vw;
 }
 
+.alignment {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.dropdown{
+    align-self: center;
+}
+
+/*
 .custom-dropdown {
     position: relative;
     display: inline-block;
     width: 100px;
 }
 
-    /* Setas personalizadas */
+    /* Setas personalizadas 
     .custom-dropdown::after {
-        content: "\25BC"; /* Código Unicode para a seta para baixo */
+        content: "\25BC"; /* Código Unicode para a seta para baixo 
         position: absolute;
         top: 70%;
         right: 20px;
@@ -23,16 +36,16 @@ html {
         pointer-events: none;
     }
 
-    /* Remove a borda do dropdown */
+    /* Remove a borda do dropdown 
     .custom-dropdown select {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         border: none;
         width: 100%;
-        padding: 5px; /* Ajuste conforme necessário */
+        padding: 5px; /* Ajuste conforme necessário 
         cursor: pointer;
-        background-color: #ccc; /* Cor de fundo cinza */
+        background-color: #ccc; /* Cor de fundo cinza 
     }
 
 
@@ -74,6 +87,8 @@ body {
 }
 
 .final-buttons button {
-    font-size: 24px; /* Ajuste conforme necessário */
+    font-size: 24px; /* Ajuste conforme necessário 
     margin: 0 10px;
 }
+
+*/

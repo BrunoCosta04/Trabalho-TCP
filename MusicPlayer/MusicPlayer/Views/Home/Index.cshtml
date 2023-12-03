@@ -4,24 +4,27 @@
 
 
 
-<div class="text-center">
+<div class="text-center row m-5">
     <h1 class="display-3">Music Player - Gerador de música a partir de textos</h1>
     <div class="container text-center mt-5">
         <p>Reproduza um texto qualquer como música! O gerador lerá o texto e transformará em uma música totalmente única, com harmonia, timbre, ritmos, tudo instantaneamente!</p>
     </div>
-
+</div>
+<div class="row m-5">
 
     <div class="form-group">
         <label for="textInput">Insira o texto abaixo:</label>
         <textarea class="form-control" id="textInput" rows="10" placeholder="Insira aqui o texto a ser transformado em música"></textarea>
     </div>
+</div>
 
 
-    <div class="d-flex justify-content-center mb-3">
+<div class="row m-5 ">
+    
         <!-- Dropdown para Instrumento -->
-
-        <div class="dropdown1">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+    <div class="dropdown1  col-md-3 offset-md-3">
+        <button class="btn  btn-secondary width-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Instrumento
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -31,8 +34,8 @@
             </div>
         </div>
 
-        <div class="dropdown2">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown2 col-md-3 ">
+        <button class="btn  btn-secondary width-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Oitava
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -41,42 +44,30 @@
                 <a class="dropdown-item" href="#">oitava 3</a>
             </div>
         </div>
+    
+</div>
 
-        <!--
-        <div class="form-group mx-3 custom-dropdown">
-            <label for="instrumentoDropdown">Instrumento:</label>
-            <select class="custom-select" id="instrumentoDropdown">
-                <option value="piano">Piano</option>
-                <option value="violao">Violão</option>
-                <option value="guitarra">Guitarra</option>
-                <option value="flauta">Flauta</option>
-            </select>
-        </div>
 
-        <div class="form-group mx-3 custom-dropdown">
-            <label for="oitavaDropdown">Oitava:</label>
-            <select class="custom-select" id="oitavaDropdown">
-                <option value="1">Oitava 1</option>
-                <option value="2">Oitava 2</option>
-                <option value="3">Oitava 3</option>
-            </select>
-        </div>
-
-        -->
-
-     
-        <!-- Slider de Volume -->
-        <div class="volume-slider">
+<div class="row m-5">
+    <!-- Slider de Volume -->
+        <div class="volume-slider centro-vertical-horizontal">
             <label for="volumeRange">Volume:</label>
             <input type="range" class="form-control-range" id="volumeRange">
         </div>
 
         <!-- Botões de Play/Pause -->
-        <div class="final-buttons">
-
-            <button type="button" class="btn btn-secondary">PLAY</button>
-            <button type="button" class="btn btn-secondary">PAUSE</button>
-
-        </div>
-    </div>
+        
 </div>
+
+<div class="row m-5 align-content-center">
+    <div class="final-buttons centro-vertical-horizontal ">
+
+        <button type="button" class="btn btn-lg width-btn btn-secondary btn-block m-2">PLAY</button>
+        <button type="button" class="btn btn-lg width-btn btn-secondary btn-block m-2">PAUSE</button>
+
+    </div>
+
+</div>
+
+
+
