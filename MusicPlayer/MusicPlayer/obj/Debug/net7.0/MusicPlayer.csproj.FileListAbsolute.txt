@@ -76,3 +76,41 @@ C:\Users\Guilherme\Documents\GitHub\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Deb
 C:\Users\Guilherme\Documents\GitHub\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.pdb
 C:\Users\Guilherme\Documents\GitHub\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.genruntimeconfig.cache
 C:\Users\Guilherme\Documents\GitHub\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\ref\MusicPlayer.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\appsettings.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\MusicPlayer.staticwebassets.runtime.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\MusicPlayer.exe
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\MusicPlayer.deps.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\MusicPlayer.runtimeconfig.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\MusicPlayer.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\MusicPlayer.pdb
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\NAudio.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\NAudio.Asio.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\NAudio.Core.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\NAudio.Midi.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\NAudio.Wasapi.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\bin\Debug\net7.0\NAudio.WinMM.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.csproj.AssemblyReference.cache
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.AssemblyInfoInputs.cache
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.AssemblyInfo.cs
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.csproj.CoreCompileInputs.cache
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.RazorAssemblyInfo.cache
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.RazorAssemblyInfo.cs
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\staticwebassets\msbuild.MusicPlayer.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\staticwebassets\msbuild.build.MusicPlayer.props
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MusicPlayer.props
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MusicPlayer.props
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\scopedcss\bundle\MusicPlayer.styles.css
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.csproj.CopyComplete
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\refint\MusicPlayer.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.pdb
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\MusicPlayer.genruntimeconfig.cache
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\ref\MusicPlayer.dll
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Marcus\OneDrive - UFRGS\Caderno\Estudos\UFRGS\_TCP\Trabalhos\Trabalho-TCP\MusicPlayer\MusicPlayer\obj\Debug\net7.0\scopedcss\projectbundle\MusicPlayer.bundle.scp.css

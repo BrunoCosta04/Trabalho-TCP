@@ -28,7 +28,7 @@ namespace MusicPlayer
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=MusicPlayer}/{action=Index}/{id?}");
 
             app.Run();
         }
