@@ -2,7 +2,8 @@
 {
     public class Music
     {
-        public required string Text { get; set; }
-        public required byte[] NewText { get; set; }
+        public int Id { get; set; }
+        public string Text { get; set; } = string.Empty;
+        public byte[] NewText { get; set; } 
     }
 }

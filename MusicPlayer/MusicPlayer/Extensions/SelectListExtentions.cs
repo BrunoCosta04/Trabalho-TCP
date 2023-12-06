@@ -6,11 +6,11 @@ namespace MusicPlayer.Extensions
 {
     public static class SelectListExtentions
     {
-        public static IEnumerable<SelectListItem> PopulateSelectList<T>(this IEnumerable<T> data, 
-                                                                        Func<T, string> textSelector,
-                                                                        Func<T, string> valueSelector,
-                                                                        string? defaultText = null,
-                                                                        string? defaultValue = null)
+        public static IEnumerable<SelectListItem> ReturnSelectListFromData<T>(this IEnumerable<T> data, 
+                                                                              Func<T, string> textSelector,
+                                                                              Func<T, string> valueSelector,
+                                                                              string? defaultText = null,
+                                                                              string? defaultValue = null)
         {
             var items = data.Select(item => new SelectListItem
             {

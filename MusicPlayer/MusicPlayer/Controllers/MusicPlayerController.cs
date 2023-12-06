@@ -11,14 +11,15 @@ namespace MusicPlayer.Controllers
         {
             IndexViewModel componentsValues = new IndexViewModel();
 
-            componentsValues.DropdownListInstruments = InstrumentData.Instruments.PopulateSelectList(x => x.Name, x => x.Id.ToString());
-            componentsValues.DropdownListOctaves = OctaveData.Octaves.PopulateSelectList(x => x.Name, x => x.Id.ToString());
+            componentsValues.Music = new Music();
+            componentsValues.DropdownListInstruments = InstrumentData.Instruments.ReturnSelectListFromData(x => x.Name, x => x.Id.ToString());
+            componentsValues.DropdownListOctaves = OctaveData.Octaves.ReturnSelectListFromData(x => x.Name, x => x.Id.ToString());
 
             return View(componentsValues);
         }
 
         [HttpPost]
-        public IActionResult Teste([FromForm] Music music)
+        public IActionResult Teste(Music music, int instrument, int octave, int volume)
         {
 
 
@@ -26,7 +27,7 @@ namespace MusicPlayer.Controllers
             //retornar os parametros escolhidos no momento do clique
 
 
-            return View(music);
+            return View();
         }
     }
 }
