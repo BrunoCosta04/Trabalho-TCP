@@ -1,4 +1,4 @@
-﻿@* @model MusicPlayer.ViewModels.IndexViewModel; *@
+﻿@model MusicPlayer.ViewModels.IndexViewModel;
 
 ﻿@{
 
@@ -19,34 +19,32 @@
         <div class="form-group">
 
             @Html.Label("textInput","Insira o texto abaixo:")
-            @* @Html.TextBoxFor(x=>x.Music) *@
             <textarea class="form-control" id="textInput" rows="10" placeholder="Insira aqui o texto a ser transformado em música"></textarea>
         </div>
     </div>
 
+    <!--DropdowList: Instrumentos e Oitavas-->
     <div class="row m-5 ">
-
         <div class="dropdown col-md-3 offset-md-3">
-            @Html.DropDownList("Instrument",Html.GetEnumSelectList<MusicPlayer.Models.Instruments>(),"Instrument",new { @class = "btn btn-secondary  width-btn"})
+            @Html.DropDownList("InstrumentTeste", Model.DropdownListInstruments, "Instrument",new { @class = "btn btn-secondary  width-btn"})
         </div>
         <div class="dropdown col-md-3 offset-md-3">
-            @Html.DropDownList("Instrument",Html.GetEnumSelectList<MusicPlayer.Models.Octaves>(),"Octaves",new { @class = "btn btn-secondary  width-btn"})
+            @Html.DropDownList("Octave", Model.DropdownListOctaves, "Octave", new { @class = "btn btn-secondary  width-btn"})
         </div>
     </div>
 
 
-
-    <div class="row m-5">
+    @* <div class="row m-5">
         <!-- Slider de Volume -->
         <div class="volume-slider centro-vertical-horizontal">
             <label for="volumeRange">Volume:</label>
             <input type="range" class="form-control-range" id="volumeRange">
         </div>
 
-        <!-- Botões de Play/Pause -->
 
-    </div>
+    </div> *@
 
+    @*  <!-- Botões de Play/Pause -->
     <div class="row m-5 align-content-center">
         <div class="final-buttons centro-vertical-horizontal ">
 
@@ -54,5 +52,5 @@
             <button type="button" class="btn btn-lg width-btn btn-secondary btn-block m-2">STOP</button>
 
         </div>
-    </div>
+    </div> *@
 }

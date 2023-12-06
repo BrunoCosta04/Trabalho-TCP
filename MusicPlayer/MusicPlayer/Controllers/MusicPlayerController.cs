@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using MusicPlayer.Extensions;
 using MusicPlayer.Models;
 using MusicPlayer.ViewModels;
 
@@ -9,22 +9,12 @@ namespace MusicPlayer.Controllers
     {
         public IActionResult Index()
         {
-            //popular comboboxes
+            IndexViewModel componentsValues = new IndexViewModel();
 
-            //IndexViewModel indexViewModel = new IndexViewModel();
+            componentsValues.DropdownListInstruments = InstrumentData.Instruments.PopulateSelectList(x => x.Name, x => x.Id.ToString());
+            componentsValues.DropdownListOctaves = OctaveData.Octaves.PopulateSelectList(x => x.Name, x => x.Id.ToString());
 
-            //indexViewModel.instruments = new List<Instrument>()
-            //{
-            //    new Instrument(){ Id=0,Name="Piano"},
-            //    new Instrument(){ Id=27,Name="Eletric Guitar"},
-            //};
-
-            List<string> list = new List<string>();
-            list.Add("teste");
-
-            ViewBag.Test = new SelectList(list);
-
-            return View();
+            return View(componentsValues);
         }
 
         [HttpPost]
