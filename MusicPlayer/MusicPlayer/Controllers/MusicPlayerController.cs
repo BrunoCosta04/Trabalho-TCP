@@ -18,7 +18,7 @@ namespace MusicPlayer.Controllers
             return View(componentsValues);
         }
 
-        [HttpPost]
+        //[HttpPost]
         public IActionResult Teste(Music music, int instrument, int octave, int volume)
         {
 

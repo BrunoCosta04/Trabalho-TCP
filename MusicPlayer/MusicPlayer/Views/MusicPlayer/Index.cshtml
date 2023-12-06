@@ -1,11 +1,10 @@
 ﻿@model MusicPlayer.ViewModels.IndexViewModel;
 
 ﻿@{
-
     ViewData["Title"] = "Music Player";
 }
 
-@using (Html.BeginForm("Teste", "MusicPlayer", FormMethod.Post))
+@using (Html.BeginForm("Teste", "MusicPlayer"))
 {
     <div class="text-center row m-5">
         <h1 class="display-3">Music Player - Gerador de música a partir de textos</h1>
@@ -17,12 +16,7 @@
     <div class="row m-5">
         <div class="form-group">
             @Html.Label("textInput","Insira o texto abaixo:")
-            @Html.TextAreaFor(x => x.Music.Text,
-                                                new { 
-                                                        @class = "form-control", 
-                                                        @rows = "10", 
-                                                        @placeholder = "Insira aqui o texto a ser transformado em música", 
-                                                        @id = "textInput"})
+            @Html.TextAreaFor(x => x.Music.Text, new { @class = "form-control", @rows = "10", @placeholder = "Insira aqui o texto a ser transformado em música", @id = "textInput" })
         </div>
     </div>
 
@@ -36,12 +30,12 @@
         </div>
     </div>
 
-
     <div class="row m-5">
         <!-- Slider de Volume -->
         <div class="volume-slider centro-vertical-horizontal">
-            <label for="volumeRange">Volume:</label>
-            <input type="range" class="form-control-range" id="volumeRange">
+
+            <label for="volume">Volume:</label>
+            <input type="range" min="0" max="127" id="volume" name="volume">
         </div>
     </div>
 
@@ -55,3 +49,4 @@
         </div>
     </div>
 }
+
