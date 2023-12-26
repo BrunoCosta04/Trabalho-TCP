@@ -1,5 +1,5 @@
 ﻿namespace MusicPlayer.Models
-{
+{   //pode ter aqui como atributo a ação que deve ser tomada com cada caractere.
     public class Compiler
     {
         public int OctaveDefault { get; private set; }
