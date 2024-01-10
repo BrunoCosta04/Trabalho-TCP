@@ -9,5 +9,6 @@ namespace MusicPlayer.ViewModels
         public IEnumerable<SelectListItem> DropdownListInstruments { get; set; }
         public IEnumerable<SelectListItem> DropdownListOctaves { get; set; }
 
+        public int Volume { get; set; }
     }
 }

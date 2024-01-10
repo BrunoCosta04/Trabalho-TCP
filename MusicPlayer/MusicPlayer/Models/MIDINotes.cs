@@ -1,6 +1,7 @@
 ﻿namespace MusicPlayer.Models
 {
-    public class MIDINotes
+    public enum MIDINotes
     {
+
     }
 }

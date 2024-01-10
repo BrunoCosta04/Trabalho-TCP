@@ -4,7 +4,10 @@
     ViewData["Title"] = "Music Player";
 }
 
-@using (Html.BeginForm("Teste", "MusicPlayer"))
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+@using (Html.BeginForm("PlaySong", "MusicPlayer"))
 {
     <div class="text-center row m-5">
         <h1 class="display-3">Music Player - Gerador de música a partir de textos</h1>
@@ -12,15 +15,14 @@
             <p>Reproduza um texto qualquer como música! O gerador lerá o texto e transformará em uma música totalmente única, com harmonia, timbre, ritmos, tudo instantaneamente!</p>
         </div>
     </div>
-
     <div class="row m-5">
         <div class="form-group">
+            
             @Html.Label("textInput","Insira o texto abaixo:")
             @Html.TextAreaFor(x => x.Music.Text, new { @class = "form-control", @rows = "10", @placeholder = "Insira aqui o texto a ser transformado em música", @id = "textInput" })
         </div>
     </div>
-
-    <!--DropdowList: Instrumentos e Oitavas-->
+    <!--DropdowList: Instrumentos-->
     <div class="row m-5 ">
         <div class="dropdown col-md-3 offset-md-3">
             @Html.DropDownList("Instrument", Model.DropdownListInstruments, "Instrument",new { @class = "btn btn-secondary  width-btn"})
@@ -29,24 +31,21 @@
             @Html.DropDownList("Octave", Model.DropdownListOctaves, "Octave", new { @class = "btn btn-secondary  width-btn"})
         </div>
     </div>
-
     <div class="row m-5">
         <!-- Slider de Volume -->
         <div class="volume-slider centro-vertical-horizontal">
-
-            <label for="volume">Volume:</label>
-            <input type="range" min="0" max="127" id="volume" name="volume">
+            <label for="volumeRange">Volume:</label>
+            <input type="range" min="0" max="127" id="volumeRange" name="volume">
         </div>
     </div>
-
     <!-- Botões de Play/Pause -->
     <div class="row m-5 align-content-center">
         <div class="final-buttons centro-vertical-horizontal ">
-
             <button type="submit" class="btn btn-lg width-btn btn-secondary btn-block m-2">PLAY</button>
-            <button type="button" class="btn btn-lg width-btn btn-secondary btn-block m-2">STOP</button>
-
+            @* <button type="button" class="btn btn-lg width-btn btn-secondary btn-block m-2">STOP</button> *@
         </div>
+
     </div>
 }
+<a href="@Url.ActionLink("DownloadMIDI", "MusicPlayer", Model.Music)" type="button" class="btn btn-lg width-btn btn-secondary btn-block m-2">PLAY</a>
 
