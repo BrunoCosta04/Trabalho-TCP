@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 
 namespace MusicPlayer.Extensions
 {
     public static class SelectListExtentions
     {
-        public static IEnumerable<SelectListItem> ReturnSelectListFromData<T>(this IEnumerable<T> data, 
+        public static IEnumerable<SelectListItem> ReturnSelectListFromData<T>(this IEnumerable<T> data,
                                                                               Func<T, string> textSelector,
                                                                               Func<T, string> valueSelector,
                                                                               string? defaultText = null,
@@ -22,7 +20,7 @@ namespace MusicPlayer.Extensions
             {
                 var defaultItem = new SelectListItem
                 {
-                    Text = defaultText ?? "Select an option", 
+                    Text = defaultText ?? "Select an option",
                     Value = defaultValue ?? string.Empty
                 };
 

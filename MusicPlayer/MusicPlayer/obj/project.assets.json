@@ -2,9 +2,6 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "jQuery/1.8.0": {
-        "type": "package"
-      },
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -209,12 +206,6 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "Microsoft.jQuery.Unobtrusive.Ajax/3.2.6": {
-        "type": "package",
-        "dependencies": {
-          "jQuery": "1.8.0"
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {
@@ -518,25 +509,6 @@
     }
   },
   "libraries": {
-    "jQuery/1.8.0": {
-      "sha512": "laDFQRJrIRHT0Z0GVYklMt3bE0iu0MZFJwHwg21kt3SHb7Bj8TdNiM3K+ZdK1DzB8ZxKy8z7NkJvwMas+dmHBw==",
-      "type": "package",
-      "path": "jquery/1.8.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Content/Scripts/jquery-1.8.0-vsdoc.js",
-        "Content/Scripts/jquery-1.8.0.js",
-        "Content/Scripts/jquery-1.8.0.min.js",
-        "Tools/common.ps1",
-        "Tools/install.ps1",
-        "Tools/jquery-1.8.0.intellisense.js",
-        "Tools/uninstall.ps1",
-        "jquery.1.8.0.nupkg.sha512",
-        "jquery.nuspec"
-      ]
-    },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
       "sha512": "M0h+ChPgydX2xY17agiphnAVa/Qh05RAP8eeuqGGhQKT10claRBlLNO6d2/oSV8zy0RLHzwLnNZm5xuC/gckGA==",
       "type": "package",
@@ -822,19 +794,6 @@
         "microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
         "microsoft.extensions.dependencymodel.nuspec",
         "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.jQuery.Unobtrusive.Ajax/3.2.6": {
-      "sha512": "udg7ZBszgqxloQ+ShJRONKQAzPnJIlUhKZB+AIvZdKh7CDc5Nms69T9X0hN5i+NqMmQE6njkzdCcEb16lPdJTw==",
-      "type": "package",
-      "path": "microsoft.jquery.unobtrusive.ajax/3.2.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Content/Scripts/jquery.unobtrusive-ajax.js",
-        "Content/Scripts/jquery.unobtrusive-ajax.min.js",
-        "microsoft.jquery.unobtrusive.ajax.3.2.6.nupkg.sha512",
-        "microsoft.jquery.unobtrusive.ajax.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
@@ -1378,7 +1337,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 7.0.15",
-      "Microsoft.jQuery.Unobtrusive.Ajax >= 3.2.6",
       "NAudio >= 2.2.1"
     ]
   },
@@ -1389,11 +1347,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
+      "projectUniqueName": "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
       "projectName": "MusicPlayer",
-      "projectPath": "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
+      "projectPath": "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
       "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\obj\\",
+      "outputPath": "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1432,10 +1390,6 @@
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[7.0.15, )"
-          },
-          "Microsoft.jQuery.Unobtrusive.Ajax": {
-            "target": "Package",
-            "version": "[3.2.6, )"
           },
           "NAudio": {
             "target": "Package",

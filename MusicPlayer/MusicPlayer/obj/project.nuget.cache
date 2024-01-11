@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "xybUOyLhKBST8hk7XOzy3dtZ6e8aRhZPujSWGQePOUOoC1wFAXZ4KbPqYNU6vGG4aDENcnpmC3e/6JeTxon6pw==",
+  "dgSpecHash": "yu9CzdZoIgsJVKaoA47jPzrki+Ax/5rCpFGV2tmXA9PgKSbOehxVtk0ZCeGhFU8gCwomQM6/+UgOfoXS7+aV6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
+  "projectFilePath": "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Marcus\\.nuget\\packages\\jquery\\1.8.0\\jquery.1.8.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\7.0.15\\microsoft.aspnetcore.mvc.razor.runtimecompilation.7.0.15.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
@@ -13,7 +12,6 @@
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.0.0\\microsoft.codeanalysis.csharp.4.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.0\\microsoft.codeanalysis.razor.6.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
-    "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.jquery.unobtrusive.ajax\\3.2.6\\microsoft.jquery.unobtrusive.ajax.3.2.6.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",

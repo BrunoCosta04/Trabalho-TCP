@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace MusicPlayer.Models
+﻿namespace MusicPlayer.Models
 {
     public class Instrument
     {

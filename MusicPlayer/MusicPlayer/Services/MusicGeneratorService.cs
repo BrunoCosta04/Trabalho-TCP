@@ -1,8 +1,8 @@
 ﻿using NAudio.Midi;
 
-namespace MusicPlayer.Models
+namespace MusicPlayer.Services
 {
-    public static class MusicGenerator
+    public class MusicGeneratorService
     {
         public static void AddEventsFromText(MidiEventCollection midiEvents, int noteNumber)
         {

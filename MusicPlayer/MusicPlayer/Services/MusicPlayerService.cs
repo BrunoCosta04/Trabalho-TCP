@@ -1,10 +1,9 @@
-﻿using MusicPlayer.Models.Interface;
+﻿using MusicPlayer.Models;
 using NAudio.Midi;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace MusicPlayer.Models
+namespace MusicPlayer.Services
 {
-    public class MusicPlayerTest //: IMusicPlayer
+    public class MusicPlayerService
     {
         public MidiOut MidiOut { get; private set; }
         public Music Music { get; private set; }
@@ -15,7 +14,7 @@ namespace MusicPlayer.Models
         public bool IsPlaying { get; private set; }
         public bool IsPaused { get; private set; }
 
-        public MusicPlayerTest(MidiOut midiOut, Music music, int volumeDefault, int instrument)
+        public MusicPlayerService(MidiOut midiOut, Music music, int volumeDefault, int instrument)
         {
             ChannelDefault = 1;
             MidiOut = midiOut;
@@ -25,17 +24,17 @@ namespace MusicPlayer.Models
             InstrumentActual = instrument;
             MidiOut = new MidiOut(1);
         }
-        public MusicPlayerTest() { }
+        public MusicPlayerService() { }
 
         public MidiEventCollection PlayTeste(string text)
         {
             MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
 
             //logica para popular 
-            MusicGenerator.AddEventsFromText(midiEvents, 60);
-            MusicGenerator.AddEventsFromText(midiEvents, 65);
-            MusicGenerator.AddEventsFromText(midiEvents, 70);
-            MusicGenerator.AddEventsFromText(midiEvents, 75);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 60);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 65);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 70);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 75);
 
             MidiOut midiOut = new MidiOut(0);
             foreach (var midiEvent in midiEvents[0])

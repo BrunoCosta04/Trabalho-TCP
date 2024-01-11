@@ -8,7 +8,7 @@ namespace MusicPlayer.ViewModels
         public Music Music { get; set; }
         public IEnumerable<SelectListItem> DropdownListInstruments { get; set; }
         public IEnumerable<SelectListItem> DropdownListOctaves { get; set; }
-
+        public IFormFile FileInput { get; set; }
         public int Volume { get; set; }
     }
 }

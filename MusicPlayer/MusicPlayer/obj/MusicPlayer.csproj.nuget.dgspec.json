@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {}
+    "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {
+    "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
+        "projectUniqueName": "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
         "projectName": "MusicPlayer",
-        "projectPath": "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
+        "projectPath": "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
         "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcus\\OneDrive - UFRGS\\Caderno\\Estudos\\UFRGS\\_TCP\\Trabalhos\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\obj\\",
+        "outputPath": "C:\\Users\\Marcus\\Desktop\\MusicPlayer\\MusicPlayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,10 +50,6 @@
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[7.0.15, )"
-            },
-            "Microsoft.jQuery.Unobtrusive.Ajax": {
-              "target": "Package",
-              "version": "[3.2.6, )"
             },
             "NAudio": {
               "target": "Package",

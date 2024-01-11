@@ -1,4 +1,4 @@
-﻿namespace MusicPlayer.Service
+﻿namespace MusicPlayer.Services
 {
     public interface IUserValidationService
     {
