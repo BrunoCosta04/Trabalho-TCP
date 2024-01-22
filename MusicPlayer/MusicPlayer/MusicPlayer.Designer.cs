@@ -184,6 +184,7 @@
             cmbInstruments.Name = "cmbInstruments";
             cmbInstruments.Size = new Size(208, 23);
             cmbInstruments.TabIndex = 8;
+            cmbInstruments.SelectedIndexChanged += cmbInstruments_SelectedIndexChanged;
             // 
             // label6
             // 

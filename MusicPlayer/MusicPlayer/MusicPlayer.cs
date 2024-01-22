@@ -63,9 +63,34 @@ namespace MusicPlayer
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void btnTocarMusica_Click(object sender, EventArgs e)
         {
+            //Aplication Flow:
+            //Verificar se todas as entradas do usuário são válidas.
+            //Retornar exception se erro.
+            //Gerar musica.
+            //Retornar exeption se erro.
+            //Habilitar o botão de Play.
+            //Daí o resto é na lógica do Play.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // ATENÇÃO GUI, AQUI TA O CODIGO DE EXEMPLO P GERAR OS SONS DO ULTIMO CODIGO
             //public MidiEventCollection PlayTeste(string text)
             //{
@@ -111,7 +136,8 @@ namespace MusicPlayer
         {
             try
             {
-
+                //bool validation;
+                //validation = InputValidationService.UserInputValidation(Music, selectedInstrument);
             }
             catch (Exception ex)
             {
@@ -132,6 +158,7 @@ namespace MusicPlayer
             var data = DataBase.Instruments;
 
             cmbInstruments.DataSource = data.BindComboBox(x => x.Name, x => x.Id, true);
+            //MessageBox.Show(cmbInstruments.);
         }
 
         private void LoadComboxOctaves()
@@ -150,6 +177,12 @@ namespace MusicPlayer
         }
         #endregion Methods
 
-       
+
+        private void cmbInstruments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            //string selectedInstrument = cmbInstruments.SelectedIndex.ToString();
+            //MessageBox.Show($"Opção selecionada: {selectedInstrument}");
+        }
     }
 }
