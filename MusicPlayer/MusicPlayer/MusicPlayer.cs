@@ -92,45 +92,43 @@ namespace MusicPlayer
 
 
             // ATENÇÃO GUI, AQUI TA O CODIGO DE EXEMPLO P GERAR OS SONS DO ULTIMO CODIGO
-            //public MidiEventCollection PlayTeste(string text)
+
+            MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
+
+            //logica para popular 
+            MusicGeneratorService.AddEventsFromText(midiEvents, 60);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 65);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 70);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 75);
+
+            MidiOut midiOut = new MidiOut(0);
+            foreach (var midiEvent in midiEvents[0])
+            {
+                midiOut.Send(midiEvent.GetAsShortMessage());
+            }
+            midiOut.Close();
+
+
+            //try
             //{
-            //    MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
+            //    string music = txtMusic.Text;
+            //    int octaveValue = Convert.ToInt32(cmbOctaves.SelectedValue);
+            //    int instrumentValue = Convert.ToInt32(cmbInstruments.SelectedValue);
+            //    int volume = tbVolume.Value;
 
-            //    //logica para popular 
-            //    MusicGenerator.AddEventsFromText(midiEvents, 60);
-            //    MusicGenerator.AddEventsFromText(midiEvents, 65);
-            //    MusicGenerator.AddEventsFromText(midiEvents, 70);
-            //    MusicGenerator.AddEventsFromText(midiEvents, 75);
+            //    bool isAbleToPlay = InputValidationService.UserInputValidation(txtMusic.Text, octaveValue, instrumentValue);
 
-            //    MidiOut midiOut = new MidiOut(0);
-            //    foreach (var midiEvent in midiEvents[0])
+            //    if (isAbleToPlay)
             //    {
-            //        midiOut.Send(midiEvent.GetAsShortMessage());
+            //        //generate music
+
+            //        //play Music
             //    }
-
-            //    return midiEvents;
             //}
-
-            try
-            {
-                string music = txtMusic.Text;
-                int octaveValue = Convert.ToInt32(cmbOctaves.SelectedValue);
-                int instrumentValue = Convert.ToInt32(cmbInstruments.SelectedValue);
-                int volume = tbVolume.Value;
-
-                bool isAbleToPlay = InputValidationService.UserInputValidation(txtMusic.Text, octaveValue, instrumentValue);
-
-                if (isAbleToPlay)
-                {
-                    //generate music
-
-                    //play Music
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
         private void btnGenerateMusic_Click(object sender, EventArgs e)
         {
@@ -180,7 +178,7 @@ namespace MusicPlayer
 
         private void cmbInstruments_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             //string selectedInstrument = cmbInstruments.SelectedIndex.ToString();
             //MessageBox.Show($"Opção selecionada: {selectedInstrument}");
         }
