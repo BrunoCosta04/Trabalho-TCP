@@ -1,9 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "2id5ObuDETaPqnmFR+f1IXHxPBjz4Nn9qrpIPG9rGv+p8ELPRYeCtVX27u1trEwSm8zTHxWAU9OyOwhxiAn6Rg==",
+=======
+  "dgSpecHash": "4ETjyQyNPwZS+wjZEZF1QOEgk9Nqhx2/1yrUe/51AMD2gs+FY6y1Iyu7GorxlIwOCBJukg+OM55c0xNLjaYgGQ==",
+>>>>>>> Stashed changes
   "success": true,
-  "projectFilePath": "C:\\Users\\BrunoFonte.DESKTOP-8K7VVDV\\Documents\\GitHub\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
+  "projectFilePath": "C:\\Users\\duduf\\Documents\\GitHub\\Trabalho-TCP\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
   "expectedPackageFiles": [
+<<<<<<< Updated upstream
     "C:\\Users\\BrunoFonte.DESKTOP-8K7VVDV\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\BrunoFonte.DESKTOP-8K7VVDV\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\BrunoFonte.DESKTOP-8K7VVDV\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
@@ -14,6 +19,19 @@
     "C:\\Users\\BrunoFonte.DESKTOP-8K7VVDV\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
     "C:\\Users\\BrunoFonte.DESKTOP-8K7VVDV\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\BrunoFonte.DESKTOP-8K7VVDV\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+=======
+    "C:\\Users\\duduf\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\naudio.asio\\2.2.1\\naudio.asio.2.2.1.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\naudio.core\\2.2.1\\naudio.core.2.2.1.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\naudio.midi\\2.2.1\\naudio.midi.2.2.1.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\naudio.winforms\\2.2.1\\naudio.winforms.2.2.1.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\duduf\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+>>>>>>> Stashed changes
   ],
   "logs": []
 }
