@@ -96,7 +96,7 @@ namespace MusicPlayer
             MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
 
             //logica para popular 
-            MusicGeneratorService.AddEventsFromText(midiEvents, 60);
+            MusicGeneratorService.AddEventsFromText(midiEvents, 50);
             MusicGeneratorService.AddEventsFromText(midiEvents, 65);
             MusicGeneratorService.AddEventsFromText(midiEvents, 70);
             MusicGeneratorService.AddEventsFromText(midiEvents, 75);
@@ -133,9 +133,14 @@ namespace MusicPlayer
         private void btnGenerateMusic_Click(object sender, EventArgs e)
         {
             try
-            {
+            {//-------------------- Parte do validation que tem que refazer ou pegar do duds se ele achar.
                 //bool validation;
                 //validation = InputValidationService.UserInputValidation(Music, selectedInstrument);
+             //------------------------------------------------------------------------------------------
+
+
+
+
             }
             catch (Exception ex)
             {
