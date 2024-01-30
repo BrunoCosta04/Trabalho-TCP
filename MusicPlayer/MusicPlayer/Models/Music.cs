@@ -1,9 +1,19 @@
-﻿namespace MusicPlayer.Models
+﻿using NAudio.Midi;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MusicPlayer.Models
 {
-    public class Music
+    public sealed class Music
     {
-        public int Id { get; set; }
-        public string Text { get; set; } = string.Empty;
-        public byte[] NewText { get; set; } 
+        public Music() { }
+        public MidiEventCollection Song { get; private set; }
+        public void ChangeMusic(MidiEventCollection midiEvents)
+        {
+            Song = midiEvents;
+        }
     }
 }
