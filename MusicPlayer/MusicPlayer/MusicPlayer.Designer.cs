@@ -174,6 +174,7 @@
             cmbOctaves.Name = "cmbOctaves";
             cmbOctaves.Size = new Size(208, 23);
             cmbOctaves.TabIndex = 9;
+            cmbOctaves.SelectedIndexChanged += cmbOctaves_SelectedIndexChanged;
             // 
             // cmbInstruments
             // 
@@ -273,6 +274,7 @@
             txtMusic.ScrollBars = ScrollBars.Vertical;
             txtMusic.Size = new Size(320, 224);
             txtMusic.TabIndex = 0;
+            txtMusic.TextChanged += txtMusic_TextChanged;
             // 
             // panel5
             // 

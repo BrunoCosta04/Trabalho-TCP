@@ -134,9 +134,12 @@ namespace MusicPlayer
         {
             try
             {//-------------------- Parte do validation que tem que refazer ou pegar do duds se ele achar.
-                //bool validation;
-                //validation = InputValidationService.UserInputValidation(Music, selectedInstrument);
-             //------------------------------------------------------------------------------------------
+                int selectedInstrumentIndex = cmbInstruments.SelectedIndex;
+                int selectedOctaveIndex = cmbOctaves.SelectedIndex;
+                string Music = txtMusic.Text; // Esta string é uma variável local somente usada para verificar se o campo não é vazio.
+
+                InputValidationService.UserInputValidation(Music, selectedInstrumentIndex, selectedOctaveIndex);
+                //------------------------------------------------------------------------------------------
 
 
 
@@ -180,12 +183,24 @@ namespace MusicPlayer
         }
         #endregion Methods
 
-
+        //Por agora estes eventos não possuem função específica.
         private void cmbInstruments_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            //string selectedInstrument = cmbInstruments.SelectedIndex.ToString();
-            //MessageBox.Show($"Opção selecionada: {selectedInstrument}");
+            //string selectedInstrumentIndex = cmbInstruments.SelectedIndex.ToString();
+            //MessageBox.Show($"Opção selecionada: {selectedInstrumentIndex}");
+        }
+
+        private void cmbOctaves_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string selectedOctaveIndex = cmbOctaves.SelectedIndex.ToString();
+            //MessageBox.Show($"Opção selecionada: {selectedOctaveIndex}");
+        }
+
+        private void txtMusic_TextChanged(object sender, EventArgs e)
+        {
+            //string Music = txtMusic.Text;
+            //MessageBox.Show(Music);
         }
     }
 }
