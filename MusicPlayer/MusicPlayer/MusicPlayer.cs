@@ -2,11 +2,13 @@
 using MusicPlayer.Models;
 using MusicPlayer.Services;
 using NAudio.Midi;
+using System;
 using System.Linq.Expressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MusicPlayer
 {
+
     public partial class MusicPlayer : Form
     {
         private Music Music { get; set; }
@@ -52,7 +54,7 @@ namespace MusicPlayer
         {
             try
             {
-                MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
+                //MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
                 string path = "setar diretorio dos downloads";
                 //generate music
 
@@ -65,6 +67,7 @@ namespace MusicPlayer
         }
         private void btnTocarMusica_Click(object sender, EventArgs e)
         {
+
             //Aplication Flow:
             //Verificar se todas as entradas do usuário são válidas.
             //Retornar exception se erro.
@@ -74,39 +77,25 @@ namespace MusicPlayer
             //Daí o resto é na lógica do Play.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             // ATENÇÃO GUI, AQUI TA O CODIGO DE EXEMPLO P GERAR OS SONS DO ULTIMO CODIGO
 
-            MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
+            //MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
 
-            //logica para popular 
-            MusicGeneratorService.AddEventsFromText(midiEvents, 50);
-            MusicGeneratorService.AddEventsFromText(midiEvents, 65);
-            MusicGeneratorService.AddEventsFromText(midiEvents, 70);
-            MusicGeneratorService.AddEventsFromText(midiEvents, 75);
-
+            // logica para popular
+            /* MusicGeneratorService.AddEventsFromText(midiEvents, 50,100);
+             MusicGeneratorService.AddEventsFromText(midiEvents, 65,100);
+             MusicGeneratorService.AddEventsFromText(midiEvents, 70,100);
+             MusicGeneratorService.AddEventsFromText(midiEvents, 75,100);
+           
+            MessageBox.Show(txtMusic.Text.ToUpper());
             MidiOut midiOut = new MidiOut(0);
             foreach (var midiEvent in midiEvents[0])
             {
+
                 midiOut.Send(midiEvent.GetAsShortMessage());
             }
             midiOut.Close();
+            */
 
 
             //try
@@ -139,8 +128,164 @@ namespace MusicPlayer
                 string Music = txtMusic.Text; // Esta string é uma variável local somente usada para verificar se o campo não é vazio.
 
                 InputValidationService.UserInputValidation(Music, selectedInstrumentIndex, selectedOctaveIndex);
-                //------------------------------------------------------------------------------------------
 
+
+
+
+                //------------------------------------------------------------------------------------------
+                string music = txtMusic.Text.ToUpper(); //transformo em maiuscula para facilitar o switch case
+                int octaveValue = Convert.ToInt32(cmbOctaves.SelectedValue);
+                int instrumentValue = Convert.ToInt32(cmbInstruments.SelectedValue);
+                int volume = tbVolume.Value;
+
+                long tempo = 0;
+                MidiEventCollection midiEvents = new MidiEventCollection(0, 480);
+                int[] meuVetor = { 0, 2, 4, 5, 7, 9, 11 };
+                int BPM = 120; // Substitua pelo BPM desejado
+
+                // Modificar os eventos de mudança de tempo na sequência
+                MusicGeneratorService.AdjustBPM(midiEvents, BPM);
+
+
+
+
+                Random random = new Random();
+
+
+
+                string A_G = "ABCDEFG";
+
+
+
+                // Atribuir os valores selecionados às variáveis
+                string selectedInstrument = cmbInstruments.SelectedIndex.ToString();
+                string selectedOctave = cmbOctaves.SelectedIndex.ToString();
+                // string music_maiuscula = music.ToUpper();
+                MessageBox.Show(music);
+
+                bool isAbleToPlay = InputValidationService.UserInputValidation(music, instrumentValue, octaveValue);
+                if (isAbleToPlay)
+                {
+                    for (int i = 0; i < music.Length; i++)
+                    {
+
+                        switch (music[i])
+                        {
+
+                            case 'A':
+
+                                MusicGeneratorService.AddEventsFromText(midiEvents, 9 * (octaveValue + 1), volume, ref tempo);
+                                break;
+                            case 'B':
+                                if (music[i + 1] == 'P' && music[i + 2] == 'M' && music[i + 3] == '+')
+                                {
+                                    // midiEvents(0, BPM + 80);
+                                    i = i + 3;
+                                }
+                                else
+                                {
+                                    MusicGeneratorService.AddEventsFromText(midiEvents, 11 * (octaveValue + 1), volume, ref tempo);
+                                }
+                                break;
+                            case 'C':
+                                MusicGeneratorService.AddEventsFromText(midiEvents, (octaveValue + 1), volume, ref tempo);
+                                break;
+                            case 'D':
+                                MusicGeneratorService.AddEventsFromText(midiEvents, 2 * (octaveValue + 1), volume, ref tempo);
+                                break;
+                            case 'E':
+                                MusicGeneratorService.AddEventsFromText(midiEvents, 4 * (octaveValue + 1), volume, ref tempo);
+                                break;
+                            case 'F':
+                                MusicGeneratorService.AddEventsFromText(midiEvents, 5 * (octaveValue + 1), volume, ref tempo);
+                                break;
+                            case 'G':
+                                MusicGeneratorService.AddEventsFromText(midiEvents, 7 * (octaveValue + 1), volume, ref tempo);
+                                break;
+
+
+
+                            case '+':
+                                if (volume * 2 > 127)
+                                {
+                                    volume = 127;
+                                }
+                                else
+                                {
+                                    volume *= 2;
+                                }
+                                break;
+                            case '-':
+                                volume = tbVolume.Value;
+                                break;
+
+
+                            case '\n':
+                                MusicGeneratorService.ChangeInstrument(instrumentValue);
+                                break;
+
+                            case ';':
+                                BPM = random.Next(60, 180);
+                                MusicGeneratorService.AdjustBPM(midiEvents, BPM);
+
+                                break;
+
+
+                            case 'R':
+                                if (music[i + 1] == '+')
+                                {
+                                    octaveValue++;
+                                    i++;
+                                    if (octaveValue > 12)
+                                        octaveValue = 0;
+                                }
+                                else if (music[i + 1] == '-')
+                                {
+                                    i++;
+                                    octaveValue--;
+                                    if (octaveValue < 0)
+                                        octaveValue = 12;
+                                }
+                                break;
+                            case ' ':
+                                MusicGeneratorService.AddEventsFromText(midiEvents, 7 * (octaveValue + 1), 0, ref tempo);
+
+                                break;
+
+                            case '?':
+                                int indiceAleatorio = random.Next(0, meuVetor.Length);
+                                int numeroAleatorio = meuVetor[indiceAleatorio];
+                                MusicGeneratorService.AddEventsFromText(midiEvents, numeroAleatorio * (octaveValue + 1), 0, ref tempo);
+                                break;
+                                /* case 'O':
+                                     for (int j = 0; j < A_G.Lentgh; i++)
+                                     {
+                                         if (music[i-1] == A_G[j])
+                                         {
+
+                                         }
+                                     }*/
+
+
+
+                        }
+
+
+
+
+
+                    }
+
+
+                    MidiOut midiOut = new MidiOut(0);
+                    foreach (var midiEvent in midiEvents[0])
+                    {
+                        // MessageBox.Show("oi");
+                        midiOut.Send(midiEvent.GetAsShortMessage());
+                    }
+                    MessageBox.Show("oi");
+                    midiOut.Close();
+                }
 
 
 
@@ -182,6 +327,7 @@ namespace MusicPlayer
             this.Music = new Music();
         }
         #endregion Methods
+
 
         //Por agora estes eventos não possuem função específica.
         private void cmbInstruments_SelectedIndexChanged(object sender, EventArgs e)
