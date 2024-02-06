@@ -122,7 +122,7 @@ namespace MusicPlayer
         private void btnGenerateMusic_Click(object sender, EventArgs e)
         {
             try
-            {//-------------------- Parte do validation que tem que refazer ou pegar do duds se ele achar.
+            {   //-------------------- Parte do validation que tem que refazer ou pegar do duds se ele achar.
                 int selectedInstrumentIndex = cmbInstruments.SelectedIndex;
                 int selectedOctaveIndex = cmbOctaves.SelectedIndex;
                 string Music = txtMusic.Text; // Esta string é uma variável local somente usada para verificar se o campo não é vazio.

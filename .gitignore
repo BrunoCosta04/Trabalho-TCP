@@ -1,0 +1,9 @@
+
+*.v2
+MusicPlayer/.vs/MusicPlayer/v17/.suo
+MusicPlayer/MusicPlayer/MusicPlayer.cs
+MusicPlayer/MusicPlayer/obj/Debug/net7.0-windows/MusicPlayer.AssemblyInfo.cs
+MusicPlayer/MusicPlayer/obj/Debug/net7.0-windows/MusicPlayer.AssemblyInfoInputs.cache
+*.json
+*.cache
+MusicPlayer/MusicPlayer/obj/Debug/net7.0-windows/MusicPlayer.AssemblyInfo.cs
