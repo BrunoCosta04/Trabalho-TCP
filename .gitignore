@@ -483,3 +483,6 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
+MusicPlayer/.vs/*
+MusicPlayer/MusicPlayer/bin/*
+MusicPlayer/MusicPlayer/obj/*
