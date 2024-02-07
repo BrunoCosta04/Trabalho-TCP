@@ -8,67 +8,62 @@ namespace MusicPlayer.Services
 {
     internal static class InputValidationService
     {
-        //Todos os caracteres são validos. Isso pode ser útil para o GUI.
-        private static readonly char[] validChars = { 'A', 'B', 'C', 'D', 'E', 'F', 'G','H','I',
-                                                      'J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y',
-                                                      'Z','?',';','+', '-' };
         public static bool UserInputValidation(string music, int instrumentSelectedValue, int octaveSelectedValue)
         {
             bool sucesso = true;
-
+            int number = 0;
             StringBuilder sb = new StringBuilder();
 
             if (instrumentSelectedValue < 0)
             {
+                number++;
                 sb.AppendLine("Necessário escolher um instrumento!");
                 sucesso = false;
             }
-                
 
             if (octaveSelectedValue < 0)
             {
+                number++;
                 sb.AppendLine("Necessário escolher uma oitava!");
                 sucesso = false;
             }
-                
 
             if (!MusicCharValidator(music))
             {
-                sb.AppendLine("Existem caracteres inválidos no texto!");
+                number++;
+                sb.AppendLine("O texto está vazio ou contém caracteres inválidos!");
                 sucesso = false;
             }
 
-            if (!sucesso) 
-            {   
+            if (!sucesso)
+            {
+                sb.Insert(0, $"Existem {number} erro(s) em seu pedido: \n");
                 string errorMessage = sb.ToString();
-                throw new Exception(errorMessage);
+                MessageBox.Show(errorMessage);
             }
-
-
 
             return sucesso;
         }
+
         //Valida se o texto excrito ou em texto não contem nenhum caractere desconhecido, que não esta na tabela ASCII.
-       
         private static bool MusicCharValidator(string music)
         {
-            bool sucesso = true;
-            int letterValue = 0;
+            bool success = true;
+
+            int letterValue;
+            if (string.IsNullOrEmpty(music))
+                return false;
+
             foreach (char letter in music)
             {
-                letterValue = (int)letter; 
-             //deve retornar uma mensagem de 'caractere inválido'
+                letterValue = (int)letter;
+
                 if (!(letterValue >= 0 && letterValue <= 127))
-                {   
-                    sucesso = false;
-                    break;
-                }
+                    return false;
             }
 
-
-
-
-            return sucesso;
+            return success;
         }
     }
 }
+
