@@ -63,7 +63,13 @@ namespace MusicPlayer
         {
             try
             {
+                bool isAbleToPlay = InputValidationService.MusicPlayValidation(Music.Song);
 
+                if (isAbleToPlay)
+                {
+
+
+                }
             }
             catch (Exception ex)
             {
@@ -93,6 +99,10 @@ namespace MusicPlayer
         #endregion Events
 
         #region Methods
+        private void LoadMusic()
+        {
+            this.Music = new Music();
+        }
         private void LoadComboxInstruments()
         {
             cmbInstruments.DisplayMember = "Text";
@@ -102,7 +112,6 @@ namespace MusicPlayer
 
             cmbInstruments.DataSource = data.BindComboBox(x => x.Name, x => x.Id, true);
         }
-
         private void LoadComboxOctaves()
         {
             cmbOctaves.DisplayMember = "Text";
@@ -111,12 +120,7 @@ namespace MusicPlayer
             var data = DataBase.Octaves;
 
             cmbOctaves.DataSource = data.BindComboBox(x => x.Name, x => x.Id, true);
-        }
-
-        private void LoadMusic()
-        {
-            this.Music = new Music();
-        }
+        }        
         #endregion Methods
     }
 }
