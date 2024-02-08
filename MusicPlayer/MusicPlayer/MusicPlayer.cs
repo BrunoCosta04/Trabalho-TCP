@@ -66,28 +66,16 @@ namespace MusicPlayer
         {
             try
             {
-                //bool isAbleToPlay = InputValidationService.MusicValidation(Music.Song);
+                bool isAbleToPlay = InputValidationService.MusicValidation(Music.Song);
 
-                //if (isAbleToPlay)
-                //{
-                this.Teste();
-
-                //}
+                if (isAbleToPlay)
+                    MusicPlayerService.Play(this.Music.Song);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void AppendEndMarker(IList<MidiEvent> eventList)
-        {
-            long absoluteTime = 0;
-            if (eventList.Count > 0)
-                absoluteTime = eventList[eventList.Count - 1].AbsoluteTime;
-            eventList.Add(new MetaEvent(MetaEventType.EndTrack, 0, absoluteTime));
-        }
-
         private void btnGenerateMusic_Click(object sender, EventArgs e)
         {
             try
@@ -95,21 +83,16 @@ namespace MusicPlayer
                 string music = txtMusic.Text;
                 var selectedIntrument = Convert.ToInt32(cmbInstruments.SelectedValue);
                 var selectedOctave = Convert.ToInt32(cmbOctaves.SelectedValue);
+                var volume = tbVolume.Value;
 
                 bool isAbleToGenerateMusic = InputValidationService.UserInputValidation(music, selectedIntrument, selectedOctave);
 
                 if (isAbleToGenerateMusic)
                 {
+                    var musicGenerated = MusicGeneratorService.GenerateMusic(music, volume, ref selectedOctave, selectedIntrument);
 
-
-
-
-
-
-
-
-
-                    //this.Music.ChangeMusic();
+                    this.Music.ChangeMusic(musicGenerated);
+                    MessageBox.Show("Música gerada com sucesso!");
                 }
             }
             catch (Exception ex)
@@ -142,26 +125,22 @@ namespace MusicPlayer
 
             cmbOctaves.DataSource = data.BindComboBox(x => x.Name, x => x.Id, true);
         }
-
         private void Teste()
         {
-            int bpm = 120;
-            int ticksPerQuarterNote = CalculateTicksPerQuarterNote(bpm);
-
-            int absoluteTime = 3 * ticksPerQuarterNote;
+            long absoluteTime = 0;
             int channel = 1;
             int noteNumber = 54;
             int volume = 127;
 
-            int durationInSeconds = 3;
-            int ticksForDuration = (int)(durationInSeconds * ticksPerQuarterNote);
+            int duration = 100;
 
-            MidiEventCollection midiEventCollection = new MidiEventCollection(1, ticksPerQuarterNote);
+
+            MidiEventCollection midiEventCollection = new MidiEventCollection(1, 120);
             midiEventCollection.AddTrack();
 
             MidiEvent changeInstrument = new PatchChangeEvent(0, channel, 0);
-            NoteOnEvent noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, ticksForDuration);
-            NoteEvent noteOff = new NoteEvent(absoluteTime + ticksForDuration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
+            NoteOnEvent noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, duration);
+            NoteEvent noteOff = new NoteEvent(absoluteTime + duration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
 
             var midiEvents = midiEventCollection[0];
 
@@ -172,34 +151,28 @@ namespace MusicPlayer
             //esperar um tempo
 
             absoluteTime = absoluteTime + 2000;
-            durationInSeconds = 5;
-            ticksForDuration = (int)(durationInSeconds * ticksPerQuarterNote);
             noteNumber = 54;
 
             changeInstrument = new PatchChangeEvent(absoluteTime, channel, 27);
             absoluteTime += 1;
-            noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, ticksForDuration);
-            noteOff = new NoteEvent(absoluteTime + ticksForDuration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
+            noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, duration);
+            noteOff = new NoteEvent(absoluteTime + duration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
 
             midiEvents.Add(changeInstrument);
             midiEvents.Add(noteOn);
             midiEvents.Add(noteOff);
 
-            AppendEndMarker(midiEvents);
+            absoluteTime = 0;
+            var eventList = midiEventCollection[0];
+            if (eventList.Count > 0)
+                absoluteTime = eventList[eventList.Count - 1].AbsoluteTime;
+            eventList.Add(new MetaEvent(MetaEventType.EndTrack, 0, absoluteTime));
+
 
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\song.mid";
             MidiFile.Export(desktopPath, midiEventCollection);
 
-            //MusicPlayerService.Play(midiEventCollection);
-
-
-        }
-        static int CalculateTicksPerQuarterNote(int bpm)
-        {
-            double secondsPerMinute = 60.0;
-            double ticksPerSecond = 480.0; // Adjust as needed for your resolution
-
-            return (int)(secondsPerMinute / bpm * ticksPerSecond);
+            MusicPlayerService.Play(midiEventCollection);
         }
         #endregion Methods
     }

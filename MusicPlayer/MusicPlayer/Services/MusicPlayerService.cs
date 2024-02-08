@@ -14,6 +14,7 @@ namespace MusicPlayer.Services
             using (var midiOut = new MidiOut(0))
             {
                 var midiEvents = midiEventsCollection[0];
+                long differenceBetweenAbsoluteTimes = 0;
 
                 foreach (var midiEvent in midiEvents)
                 {
@@ -21,7 +22,9 @@ namespace MusicPlayer.Services
 
                     if (midiEvent.CommandCode == MidiCommandCode.NoteOn)
                     {
-                        Thread.Sleep((midiEvent as NoteOnEvent).NoteLength);
+                        differenceBetweenAbsoluteTimes = midiEvent.AbsoluteTime - differenceBetweenAbsoluteTimes;
+                        //Thread.Sleep((midiEvent as NoteOnEvent).NoteLength);
+                        //Thread.Sleep(differenceBetweenAbsoluteTimes);
                     }
                 }
             }
