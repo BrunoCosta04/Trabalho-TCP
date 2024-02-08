@@ -145,18 +145,23 @@ namespace MusicPlayer
 
         private void Teste()
         {
-            int absoluteTime = 1;
+            int bpm = 120;
+            int ticksPerQuarterNote = CalculateTicksPerQuarterNote(bpm);
+
+            int absoluteTime = 3 * ticksPerQuarterNote;
             int channel = 1;
             int noteNumber = 54;
             int volume = 127;
-            int duration = 1;
 
-            MidiEventCollection midiEventCollection = new MidiEventCollection(1, 120);
+            int durationInSeconds = 3;
+            int ticksForDuration = (int)(durationInSeconds * ticksPerQuarterNote);
+
+            MidiEventCollection midiEventCollection = new MidiEventCollection(1, ticksPerQuarterNote);
             midiEventCollection.AddTrack();
 
             MidiEvent changeInstrument = new PatchChangeEvent(0, channel, 0);
-            NoteOnEvent noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, duration);
-            NoteEvent noteOff = new NoteEvent(absoluteTime + duration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
+            NoteOnEvent noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, ticksForDuration);
+            NoteEvent noteOff = new NoteEvent(absoluteTime + ticksForDuration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
 
             var midiEvents = midiEventCollection[0];
 
@@ -167,13 +172,14 @@ namespace MusicPlayer
             //esperar um tempo
 
             absoluteTime = absoluteTime + 2000;
-            duration = 3000;
+            durationInSeconds = 5;
+            ticksForDuration = (int)(durationInSeconds * ticksPerQuarterNote);
             noteNumber = 54;
 
             changeInstrument = new PatchChangeEvent(absoluteTime, channel, 27);
             absoluteTime += 1;
-            noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, duration);
-            noteOff = new NoteEvent(absoluteTime + duration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
+            noteOn = new NoteOnEvent(absoluteTime, channel, noteNumber, volume, ticksForDuration);
+            noteOff = new NoteEvent(absoluteTime + ticksForDuration, channel, MidiCommandCode.NoteOff, noteNumber, 0);
 
             midiEvents.Add(changeInstrument);
             midiEvents.Add(noteOn);
@@ -186,19 +192,14 @@ namespace MusicPlayer
 
             //MusicPlayerService.Play(midiEventCollection);
 
-            
+
         }
-        private string ToMBT(long eventTime, int ticksPerQuarterNote, TimeSignatureEvent timeSignature)
+        static int CalculateTicksPerQuarterNote(int bpm)
         {
-            int beatsPerBar = timeSignature == null ? 4 : timeSignature.Numerator;
-            int ticksPerBar = timeSignature == null ? 
-                                    ticksPerQuarterNote * 4 
-                                    : (timeSignature.Numerator * ticksPerQuarterNote * 4) / (1 << timeSignature.Denominator);
-            int ticksPerBeat = ticksPerBar / beatsPerBar;
-            long bar = 1 + (eventTime / ticksPerBar);
-            long beat = 1 + ((eventTime % ticksPerBar) / ticksPerBeat);
-            long tick = eventTime % ticksPerBeat;
-            return string.Format("{0}:{1}:{2}", bar, beat, tick);
+            double secondsPerMinute = 60.0;
+            double ticksPerSecond = 480.0; // Adjust as needed for your resolution
+
+            return (int)(secondsPerMinute / bpm * ticksPerSecond);
         }
         #endregion Methods
     }
