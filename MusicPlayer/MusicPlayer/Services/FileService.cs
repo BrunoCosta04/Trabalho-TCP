@@ -12,7 +12,8 @@ namespace MusicPlayer.Services
         //parametro de music event collection
         public static void Download(MidiEventCollection midiEvents, string outputPath)
         {
-            MidiFile.Export(outputPath, midiEvents);
+            if (InputValidationService.MusicValidation(midiEvents))
+                MidiFile.Export(outputPath, midiEvents);
         }
 
         public static string Upload()

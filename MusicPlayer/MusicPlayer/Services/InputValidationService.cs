@@ -68,7 +68,7 @@ namespace MusicPlayer.Services
             return success;
         }
 
-        public static bool MusicPlayValidation(MidiEventCollection music)
+        public static bool MusicValidation(MidiEventCollection music)
         {
             bool success = true;
             StringBuilder sb = new StringBuilder();
