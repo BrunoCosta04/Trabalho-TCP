@@ -11,10 +11,11 @@ namespace MusicPlayer.Services
     {
         public static void Play(MidiEventCollection midiEventsCollection)
         {
+            MessageBox.Show("Espere até a música acabar! Clique para continuar.");
+
             using (var midiOut = new MidiOut(0))
             {
                 var midiEvents = midiEventsCollection[0];
-                long differenceBetweenAbsoluteTimes = 0;
 
                 foreach (var midiEvent in midiEvents)
                 {
@@ -22,8 +23,7 @@ namespace MusicPlayer.Services
 
                     if (midiEvent.CommandCode == MidiCommandCode.NoteOn)
                     {
-                        differenceBetweenAbsoluteTimes = midiEvent.AbsoluteTime - differenceBetweenAbsoluteTimes;
-                        //Thread.Sleep((midiEvent as NoteOnEvent).NoteLength);
+                        Thread.Sleep((midiEvent as NoteOnEvent).NoteLength * 4);
                         //Thread.Sleep(differenceBetweenAbsoluteTimes);
                     }
                 }

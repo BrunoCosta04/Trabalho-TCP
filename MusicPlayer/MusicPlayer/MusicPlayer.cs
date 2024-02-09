@@ -69,7 +69,9 @@ namespace MusicPlayer
                 bool isAbleToPlay = InputValidationService.MusicValidation(Music.Song);
 
                 if (isAbleToPlay)
+                {
                     MusicPlayerService.Play(this.Music.Song);
+                }
             }
             catch (Exception ex)
             {
@@ -92,6 +94,7 @@ namespace MusicPlayer
                     var musicGenerated = MusicGeneratorService.GenerateMusic(music, volume, ref selectedOctave, selectedIntrument);
 
                     this.Music.ChangeMusic(musicGenerated);
+
                     MessageBox.Show("Música gerada com sucesso!");
                 }
             }

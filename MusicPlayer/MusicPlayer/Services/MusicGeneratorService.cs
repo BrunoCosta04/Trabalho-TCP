@@ -25,7 +25,7 @@ namespace MusicPlayer.Services
 
             for (int i = 0; i < musicSize; i++)
             {
-                Command_Check(midiEventsCollection, music, i, ref octave, ref newVolume, defaultVolume, ref duration, defaultChannel);
+                Command_Check(midiEventsCollection, music, ref i, ref octave, ref newVolume, defaultVolume, ref duration, defaultChannel);
             }
 
             AppendEndMarker(midiEventsCollection);
@@ -40,7 +40,7 @@ namespace MusicPlayer.Services
 
             return absoluteTime;
         }
-        private static void Command_Check(MidiEventCollection midiEvents, string music, int i, ref int octaveValue, ref int volume, int volumeDefault, ref int duration, int channel)
+        private static void Command_Check(MidiEventCollection midiEvents, string music, ref int i, ref int octaveValue, ref int volume, int volumeDefault, ref int duration, int channel)
         {
             var absoluteTime = GetLastAbsoluteTime(midiEvents);
             int defaultChannel = 1;
@@ -73,13 +73,15 @@ namespace MusicPlayer.Services
                         {
 
                             i = i + 3;
-                            if (duration > 200)
 
-                                duration -= 571; //AUMENTA O BPM EM 80 PONTOS
 
-                            if (duration < 200)
+                            duration -= 80;
 
-                                duration = 200;
+
+                            if (duration < 50)
+                            {
+                                duration = 50;
+                            }
                         }
                         else
                         {
@@ -151,6 +153,7 @@ namespace MusicPlayer.Services
                     break;
 
                 case 'R':
+
                     if (music[i + 1] == '+')
                     {
                         octaveValue++;
@@ -168,18 +171,18 @@ namespace MusicPlayer.Services
                     break;
 
                 case '?':
-                    int[] meuVetor = { 0, 2, 4, 5, 7, 9, 11 };
-                    int indiceAleatorio = random.Next(0, meuVetor.Length);
-                    int numeroAleatorio = meuVetor[indiceAleatorio];
+                    int[] notes = { 0, 2, 4, 5, 7, 9, 11 };
+                    int noteIndex = random.Next(0, notes.Length);
+                    int aleatoryNote = notes[noteIndex];
 
-                    noteNumber = numeroAleatorio;
-                    finalNote = noteNumber + (octaveValue * changeNoteByOctave);
-
-                    if (numeroAleatorio > 0)
+                    if (aleatoryNote > 0)
+                    {
+                        noteNumber = aleatoryNote;
+                        finalNote = noteNumber + (octaveValue * changeNoteByOctave);
                         AddNoteEvents(midiEvents, absoluteTime, defaultChannel, finalNote, volume, duration);
-
+                    }
                     else
-                        AddNoteEvents(midiEvents, absoluteTime, defaultChannel, octaveValue * 1, volume, duration);
+                        AddNoteEvents(midiEvents, absoluteTime, defaultChannel, octaveValue, volume, duration);
                     break;
 
                 case 'O':
